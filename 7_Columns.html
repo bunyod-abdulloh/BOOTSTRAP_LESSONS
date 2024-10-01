@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns | Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Columns
+        .row {
+            margin-top: 20px;
+        }
+        
+        .row > div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+        }
+        */
+        /* Alignment | Vertical joylashtirish
+        .row {
+            min-height: 10rem;
+            margin-top: 20px;
+            background-color: green;
+        }
+
+        .row > div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+        }
+        */
+        /* Aligmnment | Gorizontal joylashtirish
+        .row {
+            margin-top: 20px;
+            background-color: green;
+        }
+
+        .row > div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+        }
+        */
+
+        /* Column wrapping 
+        .row {
+            margin-top: 20px;
+        }
+        
+        .row > div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+        }
+        */
+        /* Reordering (qayta tartiblash) 
+        .row {
+            margin-top: 20px;
+            background-color: green;
+        }
+        
+        .row > div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+        }
+        */
+
+        /* Offsetting columns
+ */
+        .row {
+            margin-top: 20px;
+            background-color: green;
+        }
+        
+        .row > div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background-color: red;
+            border: 1px solid white;
+            text-align: center;
+            color: white;
+        }
+        */
+        </style>        
+</head>
+<body>
+    <!-- Columns
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-4">.col</div>
+            <div class="col-sm-2">.col</div>
+            <div class="col">.col</div>
+            <div class="col">.col</div>
+        </div>
+    </div>
+    -->
+
+    <!-- Alignment | Vertikal joylashtirish
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                1
+            </div>
+            <div class="col">
+                2
+            </div>
+            <div class="col">
+                3
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                1
+            </div>
+            <div class="col">
+                2
+            </div>
+            <div class="col">
+                3
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">
+                1
+            </div>
+            <div class="col">
+                2
+            </div>
+            <div class="col">
+                3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col align-self-start">
+                1
+            </div>
+            <div class="col align-self-center">
+                2
+            </div>
+            <div class="col align-self-end">
+                3
+            </div>
+        </div>
+    </div>
+    <!-- /Vertikal joylashtirish -->
+
+    <!-- Alignment | Gorizontal joylashtirish 
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">
+                1
+            </div>
+            <div class="col-4">
+                2
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                1
+            </div>
+            <div class="col-4">
+                2
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-4">
+                1
+            </div>
+            <div class="col-4">
+                2
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                1
+            </div>
+            <div class="col-4">
+                2
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-4">
+                1
+            </div>
+            <div class="col-4">
+                2
+            </div>
+        </div>
+        <div class="row justify-content-evenly">
+            <div class="col-4">
+                1
+            </div>
+            <div class="col-4">
+                2
+            </div>
+        </div>
+    </div>
+    <!-- /Gorizontal joylashtirish -->
+
+    <!-- Column wrapping 
+    <div class="container">
+        <div class="row">
+            <div class="col-9">.col-9</div>
+            <div class="col-4">.col-4<br>Bilamizki 9 + 4 = 13 &gt; 12, berilgan 4ta ustun uzunligiga ega ustun keyin qatordan joylashadi</div>
+            <div class="col-6">.col-6<br>Ketingi ustunlar qatorni to'ldirishda davom etadi</div>
+        </div>
+    </div>
+    <!-- /Column wrapping-->        
+
+    <!-- Reordering (qayta tartiblash) -->
+    <!--
+        Flexbox klasslari yordamida ustunlarni tartibini o'zgartirish mumkin: .order-* klasslaridan foydalanib,
+        yulduzcha (*) o'rniga 0dan 5gacha bo'lgan qiymatlarni ko'rsatib, ustunlarni ketma-ketligini o'zgartish mumkin.
+        Order klasslariga breakpointlarning "infix"larini qo'shish imkoniyati mavjud va u .order-{breakpoint}-*
+        ko'rinishida bo'ladi.
+    -->
+    <!-- 
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Birinchi kelgan ustun
+            </div>
+            <div class="col order-5">
+                Ikkinchi kelgan ustun lekin Order: 5 qiymati bilan
+            </div>
+            <div class="col order-1">
+                Uchinchi kelgan ustun lekin Order: 1 qiymati bilan
+            </div>
+        </div>
+    </div>
+    <!-- /Reordering (qayta tartiblash) -->
+
+    <!-- Offsetting columns -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+            <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+        </div>
+    </div>
+    <!-- /Offsetting columns -->
+</body>
+</html>
