@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Background, borders, colors</title>
+    <style>
+      .container {
+        margin-top: 50px;
+        padding: 20px;
+        border: 1px solid red;
+      }
+
+      /* Chegara qo'shish */
+      .first-span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #fbfbfb;
+      }
+
+      /* Chegara olib tashlash */
+      .second_span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 1px solid #dee2e6;
+        background-color: #fbfbfb;
+      }
+
+      /* Chegara rangi */
+      .span-color {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #fbfbfb;
+      }
+
+      /* Chegara qalinligi */
+      .qalin-span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #fbfbfb;
+      }
+
+      /* Chegara radiusi */
+      .span-radius {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #858d95;
+      }
+
+      /* O'lchamlari */
+      .span-size {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        background-color: #858d95;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ======================== 30. Background, borders, colors ======================== -->
+    <!--
+        Background - maxsus klasslar to'plami bo'lib, elementning orqa fonini
+        o'zgartirish uchun foydalaniladi
+    -->
+
+    <div class="container">
+      <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+      <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+      <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+      <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+      <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+      <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+      <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+      <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+      <div class="p-3 mb-2 bg-body text-dark">.bg-body</div>
+      <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+      <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+    </div>
+
+    <!-- Gradientga ega bo'lgan background -->
+    <div class="container">
+      <div class="p-3 mb-2 bg-primary bg-gradient text-white">
+        .bg-primary.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-secondary bg-gradient text-white">
+        .bg-secondary.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-success bg-gradient text-white">
+        .bg-success.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-danger bg-gradient text-white">
+        .bg-danger.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-warning bg-gradient text-dark">
+        .bg-warning.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-info bg-gradient text-dark">
+        .bg-info.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-light bg-gradient text-dark">
+        .bg-light.bg-gradient
+      </div>
+      <div class="p-3 mb-2 bg-dark bg-gradient text-white">
+        .bg-dark.bg-gradient
+      </div>
+    </div>
+
+    <!-- 
+        Borders - klasslar to'plami bo'lib elementning chegarasi va uning
+        chegara radiusini o'zgartirish uchun mo'ljallangan.
+     -->
+    <!-- Chegara Qo'shish -->
+    <div class="container">
+      <span class="border first-span"></span>
+      <span class="border-top first-span"></span>
+      <span class="border-end first-span"></span>
+      <span class="border-bottom first-span"></span>
+      <span class="border-start first-span"></span>
+    </div>
+
+    <!-- Chegara olib tashlash -->
+    <div class="container">
+      <span class="border-0 second_span"></span>
+      <span class="border-top-0 second_span"></span>
+      <span class="border-end-0 second_span"></span>
+      <span class="border-bottom-0 second_span"></span>
+      <span class="border-start-0 second_span"></span>
+    </div>
+
+    <!-- Chegara rangi -->
+    <div class="container">
+      <span class="span-color border border-primary"></span>
+      <span class="span-color border border-secondary"></span>
+      <span class="span-color border border-success"></span>
+      <span class="span-color border border-danger"></span>
+      <span class="span-color border border-warning"></span>
+      <span class="span-color border border-info"></span>
+      <span class="span-color border border-light"></span>
+      <span class="span-color border border-dark"></span>
+      <span class="span-color border border-white"></span>
+    </div>
+
+    <!-- Chegara qalinligi -->
+    <div class="container">
+      <span class="border border-1"></span>
+      <span class="border border-2"></span>
+      <span class="border border-3"></span>
+      <span class="border border-4"></span>
+      <span class="border border-5"></span>
+    </div>
+
+    <!-- Chegara radiusi -->
+    <div class="container">
+      <span class="span-radius rounded"></span>
+      <span class="span-radius rounded-top"></span>
+      <span class="span-radius rounded-end"></span>
+      <span class="span-radius rounded-bottom"></span>
+      <span class="span-radius rounded-start"></span>
+      <span class="span-radius rounded-circle"></span>
+      <span class="span-radius rounded-pill"></span>
+    </div>
+
+    <!-- O'lchamlari -->
+    <div class="container">
+      <span class="span-size rounded-0"></span>
+      <span class="span-size rounded-1"></span>
+      <span class="span-size rounded-2"></span>
+      <span class="span-size rounded-3"></span>
+    </div>
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

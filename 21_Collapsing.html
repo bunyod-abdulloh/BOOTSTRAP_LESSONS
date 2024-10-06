@@ -16,6 +16,10 @@
         border: 1px solid black;
         padding: 20px;
       }
+
+      button {
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
@@ -88,9 +92,6 @@
           Toggle both elements
         </button>
       </p>
-    </div>
-
-    <div class="container">
       <div class="row">
         <div class="col">
           <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -131,7 +132,7 @@
       </div>
     </div>
 
-    <!-- Dropdowns 💡 Dropdowns - havolalar yoki tugmalar ro'yhatini ekranga
+    <!-- Dropdowns - havolalar yoki tugmalar ro'yhatini ekranga
     chiqarish uchun mo'ljallangan maxsus komponent -->
     <div class="container">
       <div class="dropdown">
@@ -286,7 +287,11 @@
           Dropup
         </button>
         <ul class="dropdown-menu">
-          <!-- Dropdown menu links -->
+          <li><a class="dropdown-item active" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
         </ul>
       </div>
       <div class="btn-group dropend">
@@ -299,7 +304,11 @@
           Dropright
         </button>
         <ul class="dropdown-menu">
-          <!-- Dropdown menu links -->
+          <li><a class="dropdown-item active" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
         </ul>
       </div>
       <div class="btn-group dropstart">
@@ -312,7 +321,11 @@
           Dropstart
         </button>
         <ul class="dropdown-menu">
-          <!-- Dropdown menu links -->
+          <li><a class="dropdown-item active" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
         </ul>
       </div>
     </div>
@@ -447,7 +460,7 @@
           <p class="mb-1">Some placeholder content in a paragraph.</p>
           <small>And some small print.</small>
         </a>
-        <a href="#" class="list-group-item list-group-item-action">
+        <a href="#" class="list-group-item list-group-item-action active">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">List group item heading</h5>
             <small class="text-muted">3 days ago</small>

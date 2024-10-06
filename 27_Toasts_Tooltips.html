@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Toasts, Tooltips</title>
+    <style>
+      .container {
+        margin-top: 50px;
+        padding: 20px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toast - foydalanuvchilarga xabarnoma ko'rsatish uchun mo'ljallangan maxsus Bootstrap komponenti -->
+    <!-- 
+        Toast veb sahifaning tezligiga ta'sir ko'rsatganligi uchun, u odatda o'chiq holatda bo'ladi. Uni yoqish uchun
+        Javascriptdan foydalanishga to'g'ri keladi
+    -->
+
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+    </script>
+
+    <div class="container">
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+      </div>
+    </div>
+
+    <script>
+      toastList.forEach((toast) => toast.show());
+    </script>
+
+    <!-- Tugma orqali "toast"ni ekranga chiqarish -->
+
+    <div class="container">
+      <button type="button" class="btn btn-primary" id="liveToastBtn">
+        Show live toast
+      </button>
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+        <div
+          id="liveToast"
+          class="toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">Hello, world! This is a toast message.</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var toastEl = document.getElementById("liveToast");
+      var liveToast = new bootstrap.Toast(toastEl);
+      var liveToastBtn = document.getElementById("liveToastBtn");
+      liveToastBtn.addEventListener("click", function () {
+        liveToast.show();
+      });
+    </script>
+
+    <!-- Bir nechta "toast"larni joylashuvi -->
+
+    <div class="container">
+      <div class="toast-container">
+        <div
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-muted">just now</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">See? Just like this.</div>
+        </div>
+        <div
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-muted">2 seconds ago</small>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="toast-body">
+            Heads up, toasts will stack automatically
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+      toastList.forEach((toast) => toast.show());
+    </script>
+
+    <!-- Turli xil rangdagi toastlar -->
+    <div class="container">
+      <div
+        class="toast align-items-center text-white bg-primary border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">Hello, world! This is a toast message.</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+      toastList.forEach((toast) => toast.show());
+    </script>
+
+    <!-- ====================== Tooltip - veb sahifamizdagi elementga qo'shimcha ma'lumot ko'rsatib o'tish uchun mo'ljallangan Bootstrapning
+        maxsus komponenti. Popoverga o'xshash, lekin unga nisbatan soddaroq ko'rinishga ega bo'ladi ========================== -->
+
+    <!--
+        Tooltip veb sahifaning tezligiga ta'sir ko'rsatganligi uchun, u odatda o'chiq holatda bo'ladi. Uni yoqish uchun
+        Javascriptdan foydalanishga to'g'ri keladi
+    -->
+
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+
+    <div class="container">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Tooltip on top"
+      >
+        Tooltip on top
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="right"
+        title="Tooltip on right"
+      >
+        Tooltip on right
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Tooltip on bottom"
+      >
+        Tooltip on bottom
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-placement="left"
+        title="Tooltip on left"
+      >
+        Tooltip on left
+      </button>
+    </div>
+
+    <!-- O'zida HTML saqlaydigan tooltip -->
+
+    <div class="container">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-bs-toggle="tooltip"
+        data-bs-html="true"
+        title="<em>Tooltip</em> <u>with</u> <b>HTML</b>"
+      >
+        Tooltip with HTML
+      </button>
+    </div>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
