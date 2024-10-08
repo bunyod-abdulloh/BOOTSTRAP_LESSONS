@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Spacing, text</title>
+    <style>
+      .container {
+        margin-top: 50px;
+        padding: 20px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Spacing -->
+    <!--
+        Spacing utilities - elementning ko'rinishini o'zgartirish uchun margin va padding qo'shuvchi maxsus klasslar
+        to'plami
+        Bootstrapda elementga 0.25rem'dan 3rem'ga bo'lgan margin va padding berish uchun maxsus klasslar
+        mavjud. Bu qiymatlarni faqatgina bir xossaga, hamma xossalarga yoki gorizontal va vertikal xossalarga berish
+        imkoniyati mavjud
+    -->
+    <div class="container">
+      <div class="mt-2 bg-info">Elementga margin-top berish</div>
+      <div class="ms-4 bg-info">Elementga margin-left berish</div>
+      <div class="mx-1 bg-info">
+        Elementga margin-left va margin-right berish
+      </div>
+      <div class="p-2 bg-info">Elementning xar tomoniga padding berish</div>
+      <div class="py-4 bg-info">
+        Elementga padding-top va padding-bottom berish
+      </div>
+      <div class="p-0 bg-info">Elementdan padding'ni olib tashlash</div>
+      <div class="px-lg-5 bg-info">
+        Elementga lg va undan katta bo'lgan holatlarda padding-left va
+        padding-right berish
+      </div>
+    </div>
+
+    <!-- Text -->
+    <!--
+        Text utilities - matn bilan ishlash uchun maxsus klasslar to'plami
+    -->
+    <div class="container">
+      <p class="text-start">Start aligned text on all viewport sizes.</p>
+      <p class="text-center">Center aligned text on all viewport sizes.</p>
+      <p class="text-end">End aligned text on all viewport sizes.</p>
+      <p class="text-sm-end">
+        End aligned text on viewports sized SM (small) or wider.
+      </p>
+      <p class="text-md-end">
+        End aligned text on viewports sized MD (medium) or wider.
+      </p>
+      <p class="text-lg-end">
+        End aligned text on viewports sized LG (large) or wider.
+      </p>
+      <p class="text-xl-end">
+        End aligned text on viewports sized XL (extra-large) or wider.
+      </p>
+    </div>
+
+    <!-- Matnni o'rash (wrapping) va uning toshib chiqish (overflow) -->
+    <div class="container">
+      <div class="badge bg-primary text-wrap" style="width: 6rem">
+        This text should wrap.
+      </div>
+      <div class="badge bg-primary text-nowrap" style="width: 6rem">
+        This text should wrap.
+      </div>
+    </div>
+
+    <!-- Word break -->
+    <div class="container">
+      <p class="text-break">
+        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+      </p>
+    </div>
+
+    <!-- Matnni o'zgartirish (transform) -->
+    <div class="container">
+      <p class="text-lowercase">Lowercased text.</p>
+      <p class="text-uppercase">Uppercased text.</p>
+      <p class="text-capitalize">CapiTaliZed text.</p>
+    </div>
+
+    <!--  -->
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
+  </body>
+</html>

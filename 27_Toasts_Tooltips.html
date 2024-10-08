@@ -25,13 +25,6 @@
         Javascriptdan foydalanishga to'g'ri keladi
     -->
 
-    <script>
-      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
-      var toastList = toastElList.map(function (toastEl) {
-        return new bootstrap.Toast(toastEl);
-      });
-    </script>
-
     <div class="container">
       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
@@ -47,10 +40,6 @@
         <div class="toast-body">Hello, world! This is a toast message.</div>
       </div>
     </div>
-
-    <script>
-      toastList.forEach((toast) => toast.show());
-    </script>
 
     <!-- Tugma orqali "toast"ni ekranga chiqarish -->
 
@@ -81,17 +70,7 @@
       </div>
     </div>
 
-    <script>
-      var toastEl = document.getElementById("liveToast");
-      var liveToast = new bootstrap.Toast(toastEl);
-      var liveToastBtn = document.getElementById("liveToastBtn");
-      liveToastBtn.addEventListener("click", function () {
-        liveToast.show();
-      });
-    </script>
-
     <!-- Bir nechta "toast"larni joylashuvi -->
-
     <div class="container">
       <div class="toast-container">
         <div
@@ -135,14 +114,6 @@
       </div>
     </div>
 
-    <script>
-      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
-      var toastList = toastElList.map(function (toastEl) {
-        return new bootstrap.Toast(toastEl);
-      });
-      toastList.forEach((toast) => toast.show());
-    </script>
-
     <!-- Turli xil rangdagi toastlar -->
     <div class="container">
       <div
@@ -163,14 +134,6 @@
       </div>
     </div>
 
-    <script>
-      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
-      var toastList = toastElList.map(function (toastEl) {
-        return new bootstrap.Toast(toastEl);
-      });
-      toastList.forEach((toast) => toast.show());
-    </script>
-
     <!-- ====================== Tooltip - veb sahifamizdagi elementga qo'shimcha ma'lumot ko'rsatib o'tish uchun mo'ljallangan Bootstrapning
         maxsus komponenti. Popoverga o'xshash, lekin unga nisbatan soddaroq ko'rinishga ega bo'ladi ========================== -->
 
@@ -178,15 +141,6 @@
         Tooltip veb sahifaning tezligiga ta'sir ko'rsatganligi uchun, u odatda o'chiq holatda bo'ladi. Uni yoqish uchun
         Javascriptdan foydalanishga to'g'ri keladi
     -->
-
-    <script>
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    </script>
 
     <div class="container">
       <button
@@ -243,5 +197,63 @@
 
     <!-- Bootstrap JS + Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Birinchi tost -->
+    <!-- 
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+    </script>
+
+    <script>
+      toastList.forEach((toast) => toast.show());
+    </script>
+    -->
+
+    <!-- Ikkinchi tost -->
+    <!-- Tugma orqali "toast"ni ekranga chiqarish -->
+    <!--
+    <script>
+      var toastEl = document.getElementById("liveToast");
+      var liveToast = new bootstrap.Toast(toastEl);
+      var liveToastBtn = document.getElementById("liveToastBtn");
+      liveToastBtn.addEventListener("click", function () {
+        liveToast.show();
+      });
+    </script>
+    -->
+
+    <!-- Bir nechta "toast"larni joylashuvi -->
+    <!--
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+      toastList.forEach((toast) => toast.show());
+    </script>
+    -->
+
+    <!-- Turli xil rangdagi toastlar -->
+    <!--
+    <script>
+      var toastElList = [].slice.call(document.querySelectorAll(".toast"));
+      var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+      });
+      toastList.forEach((toast) => toast.show());
+    </script>
+    -->
+
+    <!-- Birinchi tooltip -->
+    <script>
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
   </body>
 </html>
