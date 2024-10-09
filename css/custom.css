@@ -1,0 +1,23 @@
+.navbar-light .navbar-nav .nav-link {
+  color: green;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: orange;
+  border-color: orange;
+  color: black;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: red;
+}
+
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  background-color: rebeccapurple;
+}
