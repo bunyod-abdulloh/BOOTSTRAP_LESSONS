@@ -16,6 +16,11 @@
         padding: 20px;
         border: 1px solid red;
       }
+
+      .spc {
+        margin: 5px;
+        border: 1px solid red;
+      }
     </style>
   </head>
   <body>
@@ -28,17 +33,18 @@
         imkoniyati mavjud
     -->
     <div class="container">
-      <div class="mt-2 bg-info">Elementga margin-top berish</div>
-      <div class="ms-4 bg-info">Elementga margin-left berish</div>
-      <div class="mx-1 bg-info">
+      <h4>Spacing</h4>
+      <div class="mt-2 bg-info spc">Elementga margin-top berish</div>
+      <div class="ms-4 bg-info spc">Elementga margin-left berish</div>
+      <div class="mx-1 bg-info spc">
         Elementga margin-left va margin-right berish
       </div>
-      <div class="p-2 bg-info">Elementning xar tomoniga padding berish</div>
-      <div class="py-4 bg-info">
+      <div class="p-2 bg-info spc">Elementning xar tomoniga padding berish</div>
+      <div class="py-4 bg-info spc">
         Elementga padding-top va padding-bottom berish
       </div>
-      <div class="p-0 bg-info">Elementdan padding'ni olib tashlash</div>
-      <div class="px-lg-5 bg-info">
+      <div class="p-0 bg-info spc">Elementdan padding'ni olib tashlash</div>
+      <div class="px-lg-5 bg-info spc">
         Elementga lg va undan katta bo'lgan holatlarda padding-left va
         padding-right berish
       </div>
@@ -49,6 +55,7 @@
         Text utilities - matn bilan ishlash uchun maxsus klasslar to'plami
     -->
     <div class="container">
+      <h4>Text</h4>
       <p class="text-start">Start aligned text on all viewport sizes.</p>
       <p class="text-center">Center aligned text on all viewport sizes.</p>
       <p class="text-end">End aligned text on all viewport sizes.</p>
@@ -68,9 +75,13 @@
 
     <!-- Matnni o'rash (wrapping) va uning toshib chiqish (overflow) -->
     <div class="container">
+      <h4>Text wrap</h4>
       <div class="badge bg-primary text-wrap" style="width: 6rem">
         This text should wrap.
       </div>
+    </div>
+    <div class="container">
+      <h4>text-nowrap</h4>
       <div class="badge bg-primary text-nowrap" style="width: 6rem">
         This text should wrap.
       </div>
@@ -78,6 +89,7 @@
 
     <!-- Word break -->
     <div class="container">
+      <h4>Word break</h4>
       <p class="text-break">
         mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
       </p>
@@ -85,21 +97,98 @@
 
     <!-- Matnni o'zgartirish (transform) -->
     <div class="container">
+      <h4>Matnni o'zgartirish (transform)</h4>
       <p class="text-lowercase">Lowercased text.</p>
       <p class="text-uppercase">Uppercased text.</p>
       <p class="text-capitalize">CapiTaliZed text.</p>
     </div>
 
-    <!--  -->
+    <!-- Matn o'lchovi (font size) -->
+    <div class="container">
+      <h4>Matn o'lchovi (font size)</h4>
+      <p class="fs-1">.fs-1 text</p>
+      <p class="fs-2">.fs-2 text</p>
+      <p class="fs-3">.fs-3 text</p>
+      <p class="fs-4">.fs-4 text</p>
+      <p class="fs-5">.fs-5 text</p>
+      <p class="fs-6">.fs-6 text</p>
+    </div>
+
+    <!-- Matn qalinligi (weight) va italic -->
+    <div class="container">
+      <h4>Matn qalinligi (weight) va italic</h4>
+      <p class="fw-bold">Bold text.</p>
+      <p class="fw-bolder">
+        Bolder weight text (relative to the parent element).
+      </p>
+      <p class="fw-normal">Normal weight text.</p>
+      <p class="fw-light">Light weight text.</p>
+      <p class="fw-lighter">
+        Lighter weight text (relative to the parent element).
+      </p>
+      <p class="fst-italic">Italic text.</p>
+      <p class="fst-normal">Text with normal font style</p>
+    </div>
+
+    <!-- Qator balandligi (line height) -->
+    <div class="container">
+      <h4>Qator balandligi (line height)</h4>
+      <p class="lh-1">
+        This is a long paragraph written to show how the line-height of an
+        element is affected by our utilities. Classes are applied to the element
+        itself or sometimes the parent element. These classes can be customized
+        as needed with our utility API.
+      </p>
+      <p class="lh-sm">
+        This is a long paragraph written to show how the line-height of an
+        element is affected by our utilities. Classes are applied to the element
+        itself or sometimes the parent element. These classes can be customized
+        as needed with our utility API.
+      </p>
+      <p class="lh-base">
+        This is a long paragraph written to show how the line-height of an
+        element is affected by our utilities. Classes are applied to the element
+        itself or sometimes the parent element. These classes can be customized
+        as needed with our utility API.
+      </p>
+      <p class="lh-lg">
+        This is a long paragraph written to show how the line-height of an
+        element is affected by our utilities. Classes are applied to the element
+        itself or sometimes the parent element. These classes can be customized
+        as needed with our utility API.
+      </p>
+    </div>
+
+    <!-- Monospace -->
+    <div class="container">
+      <h4>Monospace</h4>
+      <p class="font-monospace">This is in monospace</p>
+    </div>
+
+    <!-- Reset color -->
+    <div class="container">
+      <h4>Reset color</h4>
+      <p class="text-body-secondary">
+        Secondary body text with a
+        <a href="#" class="text-reset">reset link</a>.
+      </p>
+    </div>
+
+    <!-- Text decoration -->
+    <div class="container">
+      <h4>Text decoration</h4>
+      <p class="text-decoration-underline">
+        This text has a line underneath it.
+      </p>
+      <p class="text-decoration-line-through">
+        This text has a line going through it.
+      </p>
+      <a href="#" class="text-decoration-none"
+        >This link has its text decoration removed</a
+      >
+    </div>
+
     <!-- Bootstrap JS + Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      var popoverTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="popover"]')
-      );
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl);
-      });
-    </script>
   </body>
 </html>

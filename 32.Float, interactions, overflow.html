@@ -13,11 +13,11 @@
     <style>
       .container {
         margin-top: 50px;
-        padding: 20px;
+        padding: 30px;
         border: 1px solid red;
       }
 
-      div {
+      .overf {
         display: inline-block;
         width: 200px;
         height: 200px;
@@ -33,11 +33,15 @@
         ko'rsatish imkoniyati mavjud
     -->
     <div class="container">
-      <h4>Float</h4>
+      <h4>Float | float-start</h4>
       <div class="float-start">Float start on all viewport sizes</div>
-      <br />
+    </div>
+    <div class="container">
+      <h4>float-end</h4>
       <div class="float-end">Float end on all viewport sizes</div>
-      <br />
+    </div>
+    <div class="container">
+      <h4>float-none</h4>
       <div class="float-none">Don't float on all viewport sizes</div>
     </div>
 
@@ -68,24 +72,36 @@
         (interaction) belgilaydi
     -->
     <div class="container">
-      <h4>Interactions</h4>
+      <h4>Interactions | user-select-all</h4>
       <p class="user-select-all">
         Foydalanuvchi xatboshiga sichqoncha bilan bosganda butun kontent
         belgilanadi
       </p>
+    </div>
+    <div class="container">
+      <h4>user-select-auto</h4>
       <p class="user-select-auto">
         Foydalanuvchi xatboshiga sichqoncha bilan bosganda default holat yuz
         beradi
       </p>
+    </div>
+    <div class="container">
+      <h4>user-select-none</h4>
       <p class="user-select-none">
         Foydalanuvchi xatboshiga sichqoncha bilan bosganda kontent belgilanmaydi
       </p>
+    </div>
+    <div class="container">
+      <h4>pe-none</h4>
       <p>
         <a href="#" class="pe-none" tabindex="-1" aria-disabled="true"
           >Bu havola</a
         >
         bosilmaydigaan
       </p>
+    </div>
+    <div class="container">
+      <h4>pe-auto</h4>
       <p>
         <a href="#" class="pe-auto">Bu havola</a>
         bosiladigan (default holati).
@@ -98,40 +114,25 @@
         qiymatlar ko'rsatish imkoniyati mavjud
     -->
     <div class="container">
-      <div
-        class="overflow-auto"
-        style="width: 200px; height: 50px; border: 1px solid black"
-      >
+      <div class="overflow-auto overf">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
         accumsan ante, sed semper est. Nullam quis iaculis massa. Aenean at
         libero quam. Nam eget magna felis. Curabitur suscipit velit eu magna
         fermentum, at sollicitudin nisl lacinia.
       </div>
-
-      <div
-        class="overflow-hidden"
-        style="width: 200px; height: 50px; border: 1px solid black"
-      >
+      <div class="overflow-hidden overf">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
         accumsan ante, sed semper est. Nullam quis iaculis massa. Aenean at
         libero quam. Nam eget magna felis. Curabitur suscipit velit eu magna
         fermentum, at sollicitudin nisl lacinia.
       </div>
-
-      <div
-        class="overflow-visible"
-        style="width: 200px; height: 50px; border: 1px solid black"
-      >
+      <div class="overflow-visible overf">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
         accumsan ante, sed semper est. Nullam quis iaculis massa. Aenean at
         libero quam. Nam eget magna felis. Curabitur suscipit velit eu magna
         fermentum, at sollicitudin nisl lacinia.
       </div>
-
-      <div
-        class="overflow-scroll"
-        style="width: 200px; height: 50px; border: 1px solid black"
-      >
+      <div class="overflow-scroll overf">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in
         accumsan ante, sed semper est. Nullam quis iaculis massa. Aenean at
         libero quam. Nam eget magna felis. Curabitur suscipit velit eu magna
@@ -140,13 +141,5 @@
     </div>
     <!-- Bootstrap JS + Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      var popoverTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="popover"]')
-      );
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl);
-      });
-    </script>
   </body>
 </html>
