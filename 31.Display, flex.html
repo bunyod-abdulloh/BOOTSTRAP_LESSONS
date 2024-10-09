@@ -17,7 +17,7 @@
         border: 1px solid red;
       }
       /* Flex */
-      /*
+
       .flex-container {
         background-color: rgba(86, 61, 124, 0.15);
         border: 1px solid rgba(86, 61, 124, 0.15);
@@ -27,94 +27,10 @@
         background-color: rgba(86, 61, 124, 0.15);
         border: 1px solid rgba(86, 61, 124, 0.15);
       }
-      */
-      /* Justify content */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
 
-      /* Align items */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
+      .alit {
         height: 6rem;
       }
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
-      /* Align self */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-        height: 6rem;
-      }
-
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
-
-      /* Grow va shrink */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
-      /* Wrap */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
-      /* Order */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
-      /* Align content */
-      /*
-      .flex-container {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-        height: 10rem;
-      }
-
-      .flex-item {
-        background-color: rgba(86, 61, 124, 0.15);
-        border: 1px solid rgba(86, 61, 124, 0.15);
-      }
-      */
     </style>
   </head>
   <body>
@@ -147,7 +63,7 @@
       <div class="d-inline p-2 bg-primary text-white">d-inline</div>
       <div class="d-inline p-2 bg-dark text-white">d-inline</div>
 
-      <span class="d-block p-2 bg-primary text-white">d-block</span>
+      <span class="d-block p-2 bg-primary text-white mt-3">d-block</span>
       <span class="d-block p-2 bg-dark text-white">d-block</span>
     </div>
 
@@ -157,10 +73,10 @@
         yoki ko'rsatish imkoniyati mavjud
     -->
     <div class="container">
-      <div class="d-lg-none border border-danger">
+      <div class="d-lg-none border border-danger bg-danger">
         lg va undan kattaroq bo'lgan holatlarda berkitish
       </div>
-      <div class="d-none d-lg-block border border-danger">
+      <div class="d-none d-lg-block border border-danger bg-info">
         lg va undan kichikroq bo'lgan holatlarda berkitish
       </div>
     </div>
@@ -188,12 +104,14 @@
       row-reverse, column yoki column-reverse qiymatlaridan birini ko'rsatish kerak
     -->
     <div class="container">
+      <h4>flex-row</h4>
       <div class="d-flex flex-row flex-container mb-3">
         <div class="p-2 flex-item">Flex item 1</div>
         <div class="p-2 flex-item">Flex item 2</div>
         <div class="p-2 flex-item">Flex item 3</div>
       </div>
       <div class="d-flex flex-row-reverse flex-container">
+        <h4>flex-row-reverse</h4>
         <div class="p-2 flex-item">Flex item 1</div>
         <div class="p-2 flex-item">Flex item 2</div>
         <div class="p-2 flex-item">Flex item 3</div>
@@ -207,31 +125,47 @@
     -->
 
     <div class="container">
+      <h4>start</h4>
       <div class="d-flex justify-content-start flex-container mb-2">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: right">end</h4>
       <div class="d-flex justify-content-end flex-container mb-2">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
+    </div>
+    <div class="container">
+      <h4 style="text-align: center">center</h4>
       <div class="d-flex justify-content-center flex-container mb-2">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
+    </div>
+    <div class="container">
+      <h4>between</h4>
       <div class="d-flex justify-content-between flex-container mb-2">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
+    </div>
+    <div class="container">
+      <h4>around</h4>
       <div class="d-flex justify-content-around flex-container mb-2">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
+    </div>
+    <div class="container">
+      <h4>evenly</h4>
       <div class="d-flex justify-content-evenly flex-container mb-2">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
@@ -245,28 +179,40 @@
       qabul qiladi
     -->
     <div class="container">
-      <div class="d-flex align-items-start flex-container mb-2">
+      <h4>align-items-start</h4>
+      <div class="d-flex align-items-start flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex align-items-end flex-container mb-2">
+    </div>
+    <div class="container">
+      <h4>align-items-end</h4>
+      <div class="d-flex align-items-end flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex align-items-center flex-container mb-2">
-        31. Display, flex 11
+    </div>
+    <div class="container">
+      <h4>align-items-center</h4>
+      <div class="d-flex align-items-center flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex align-items-baseline flex-container mb-2">
+    </div>
+    <div class="container">
+      <h4>align-items-baseline</h4>
+      <div class="d-flex align-items-baseline flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex align-items-stretch flex-container mb-2">
+    </div>
+    <div class="container">
+      <h4>align-items-stretch</h4>
+      <div class="d-flex align-items-stretch flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
@@ -279,28 +225,28 @@
       qiladi
     -->
     <div class="container">
-      <div class="d-flex flex-container mb-2">
+      <h4>align-self</h4>
+      <div class="d-flex flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item align-self-start">Aligned flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex flex-container mb-2">
+      <div class="d-flex flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item align-self-end">Aligned flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex flex-container mb-2">
+      <div class="d-flex flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
-        31. Display, flex 14
         <div class="p-2 flex-item align-self-center">Aligned flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex flex-container mb-2">
+      <div class="d-flex flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item align-self-baseline">Aligned flex item</div>
         <div class="p-2 flex-item">Flex item</div>
       </div>
-      <div class="d-flex flex-container mb-2">
+      <div class="d-flex flex-container mb-2 alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item align-self-stretch">Aligned flex item</div>
         <div class="p-2 flex-item">Flex item</div>
@@ -313,9 +259,12 @@
       maxsus klasslari mavjud
     -->
     <div class="container">
+      <h4>grow</h4>
       <div class="d-flex flex-container">
-        <div class="p-2 flex-grow-1 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
+        <div class="p-2 flex-grow-1 flex-item" style="text-align: center">
+          Flex item
+        </div>
         <div class="p-2 flex-item">Third flex item</div>
       </div>
     </div>
@@ -325,6 +274,7 @@
       Flex wrap xossasi nowrap, wrap va wrap-reverse qiymatlaridan birini qabul qiladi
     -->
     <div class="container">
+      <h4>wrap</h4>
       <div class="d-flex flex-wrap flex-container">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
@@ -350,6 +300,7 @@
       maxsus klasslari mavjud
     -->
     <div class="container">
+      <h4>order</h4>
       <div class="d-flex flex-nowrap flex-container">
         <div class="order-3 p-2 flex-item">First flex item</div>
         <div class="order-2 p-2 flex-item">Second flex item</div>
@@ -363,7 +314,8 @@
       stretch qiymatini ko'rsatishga maxsus klasslari mavjud
     -->
     <div class="container">
-      <div class="d-flex flex-container align-content-center flex-wrap">
+      <h4>align-content</h4>
+      <div class="d-flex flex-container align-content-end flex-wrap alit">
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
         <div class="p-2 flex-item">Flex item</div>
